@@ -273,7 +273,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5187830050960355830}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.70019096
+  m_Size: 0.72920114
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1113,10 +1113,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4805080861294152079, guid: 755f4449767ca8449a22b51a639229b7, type: 3}
-      propertyPath: m_text
-      value: Component7
-      objectReference: {fileID: 0}
     - target: {fileID: 4846342115707025096, guid: 755f4449767ca8449a22b51a639229b7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1170,8 +1166,7 @@ PrefabInstance:
       value: -69.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 7302813695900038574, guid: 755f4449767ca8449a22b51a639229b7, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 755f4449767ca8449a22b51a639229b7, type: 3}

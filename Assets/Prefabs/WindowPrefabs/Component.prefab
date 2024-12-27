@@ -429,19 +429,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 9392764217a934a45aa7b37c8357049b, type: 2}
-        m_TargetAssemblyTypeName: SliderValue, Assembly-CSharp
-        m_MethodName: SetValue
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7302813695900038574
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +441,7 @@ GameObject:
   - component: {fileID: 8535223030610927727}
   - component: {fileID: 5856142266695662110}
   - component: {fileID: 2825917355126406925}
+  - component: {fileID: 2680595974208374405}
   m_Layer: 5
   m_Name: Controller (1)
   m_TagString: Untagged
@@ -520,6 +509,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!114 &2680595974208374405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7302813695900038574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef9f50f1b143fd144b5e2f7f2cb187ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savedScriptableObject: {fileID: 11400000, guid: 621ebda39cb6f5844aa46441947055f4, type: 2}
+  linkedComponent: {fileID: 0}
 --- !u!1 &7573740991952675954
 GameObject:
   m_ObjectHideFlags: 0
