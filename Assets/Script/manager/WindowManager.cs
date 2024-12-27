@@ -39,13 +39,6 @@ namespace SGA.UI
             closedWindow.SetVisible(true);
             SetRecent(closedWindow);
         }
-
-        #region inputSystem
-        void OnCancel()
-        {
-            CloseRecentWindow();
-        }
-        #endregion
     }
 
 }

@@ -9,8 +9,9 @@ namespace SGA.UI
     [RequireComponent(typeof(UIWindow))]
     public class WindowDraggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
     {
-        Image image;
+        [SerializeField] Image image;
         [SerializeField] RectTransform dragArea;
+        RectTransform m_rectTransform;
         Texture2D textureForPixel;
         UIWindow window;
 
@@ -24,13 +25,13 @@ namespace SGA.UI
 
         private void Awake()
         {
-            image = GetComponent<Image>();
-
             textureForPixel = image.mainTexture as Texture2D;
             window = GetComponent<UIWindow>();
+            m_rectTransform = GetComponent<RectTransform>();
 
             if (windowOffReturnPosition)
-                window.InvisibleAction += window.ReturnPosition;
+                SetReturnPosition();
+
         }
         #region DragEvent
         public void OnBeginDrag(PointerEventData eventData)
@@ -43,6 +44,7 @@ namespace SGA.UI
                 return;
 
             Vector2 vec = MouseNormalized(eventData.position);
+
             Color pixelColor = textureForPixel.GetPixelBilinear(vec.x, vec.y);
             isDragging &= pixelColor.a >= 0.1f;
         }
@@ -64,15 +66,14 @@ namespace SGA.UI
         #region calculate
         Vector2 MouseNormalized(in Vector2 mousePosition)
         {
-            RectTransform rTransform = image.rectTransform;
-            return (mousePosition - (Vector2)rTransform.TransformPoint(rTransform.rect.min)) / rTransform.sizeDelta;
+            return (mousePosition - (Vector2)m_rectTransform.TransformPoint(m_rectTransform.rect.min)) / m_rectTransform.sizeDelta;
         }
 
         #endregion
         #region uiWindow action Event
-        void ReturnPosition()
+        void SetReturnPosition()
         {
-
+            window.InvisibleAction += window.ReturnPosition;
         }
 
         #endregion

@@ -527,6 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be32d633f30ea941b82895f8580da0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isVisible: 0
 --- !u!114 &370042063870443466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,8 +540,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60362cfedc0666948b0bfa5194ce5cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 441034605045394628}
   dragArea: {fileID: 4078909508858785229}
-  dragAreaType: 0
+  DragAreaDetermineByAlpha: 0
+  windowOffReturnPosition: 0
 --- !u!222 &8533704498287623108
 CanvasRenderer:
   m_ObjectHideFlags: 0

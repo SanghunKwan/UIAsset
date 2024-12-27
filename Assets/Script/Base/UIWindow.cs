@@ -1,10 +1,11 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace SGA.UI
 {
     [RequireComponent(typeof(RectTransform))]
-    public abstract class UIWindow : MonoBehaviour
+    public abstract class UIWindow : MonoBehaviour, IPointerDownHandler
     {
         RectTransform m_rectTransform;
 
@@ -44,6 +45,12 @@ namespace SGA.UI
         public void ReturnPosition()
         {
             m_rectTransform.position = originalPosition;
+        }
+
+
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            transform.SetAsLastSibling();
         }
         #endregion
 
