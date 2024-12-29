@@ -1,18 +1,22 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class InputEvent : MonoBehaviour
+namespace SGA.Temp
 {
-    public UnityEvent onCancel;
 
-    public UnityEvent onJump;
+    public class InputEvent : MonoBehaviour
+    {
+        public UnityEvent onCancel;
 
-    void OnCancel()
-    {
-        onCancel?.Invoke();
-    }
-    void OnJump()
-    {
-        onJump?.Invoke();
+        public UnityEvent onJump;
+
+        void OnCancel()
+        {
+            onCancel?.Invoke();
+        }
+        void OnJump()
+        {
+            onJump?.Invoke();
+        }
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "AudioSourceObject", menuName = "Scriptable Objects/AudioSourceObject")]
