@@ -20,12 +20,12 @@ namespace SGA.UI
         public void SetSliderValue(int index, float value)
         {
             sliderValue[index] = value;
-            sliderChangeAction(index);
+            sliderChangeAction?.Invoke(index);
         }
         public void SetToggleValue(int index, bool value)
         {
             toggleValue[index] = value;
-            toggleChangeAction(index);
+            toggleChangeAction?.Invoke(index);
         }
     }
 }

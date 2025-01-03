@@ -16,11 +16,16 @@ namespace SGA.UI
         {
             childCount = transform.childCount;
             Transform tempTransform;
+            UIWindow tempWindow;
             for (int i = 0; i < childCount; i++)
             {
                 tempTransform = transform.GetChild(i);
-                windowDictionary.Add(tempTransform, tempTransform.GetComponent<UIWindow>());
-                windowDictionary[tempTransform].SetVisible(false);
+                tempWindow = tempTransform.GetComponent<UIWindow>();
+
+                windowDictionary.Add(tempTransform, tempWindow);
+
+                if (!tempWindow.visibleInStart)
+                    tempWindow.SetVisible(false);
             }
         }
         public void SetRecent(UIWindow recentWindow)

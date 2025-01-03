@@ -9,7 +9,9 @@ namespace SGA.UI
     {
         RectTransform m_rectTransform;
 
-        [SerializeField] bool isVisible;
+        bool m_isVisible = true;
+        public bool isVisible { get { return m_isVisible; } }
+        public bool visibleInStart;
 
         public Action InvisibleAction { get; set; }
 
@@ -23,14 +25,14 @@ namespace SGA.UI
 
         public void SetVisible(bool onoff)
         {
-            if (isVisible == onoff)
+            if (m_isVisible == onoff)
                 return;
 
-            isVisible = onoff;
-            if (!isVisible)
+            m_isVisible = onoff;
+            if (!m_isVisible)
                 InvisibleAction?.Invoke();
 
-            m_rectTransform.anchoredPosition += TrueOneFalseMinus(isVisible) * Screen.height * 2 * Vector2.up;
+            m_rectTransform.anchoredPosition += TrueOneFalseMinus(m_isVisible) * Screen.height * 2 * Vector2.up;
 
         }
 
